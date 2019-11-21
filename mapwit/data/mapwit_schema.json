@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MapWiT Data Schema v1.0",
+  "type": "object",
+  "properties": {
+    "CountryOfBirth": {
+      "type": "string",
+      "description": "The country where the person was born."
+    },
+    "CountryOfLiving": {
+      "type": "string",
+      "description": "The country where the person lives currently."
+    }
+  }
+}
