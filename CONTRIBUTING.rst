@@ -18,9 +18,10 @@ Contribute Data
 ~~~~~~~~~~~~~~~
 **How to appear on the map.** This application was build as a demo, and the
 most common type of contribution is a `data file`. Starting from the existing
-example, you can add a new data file directly on GitHub, and make a Pull Request
-with the new data file. Once merged, the data will be part of the application,
-and will be displayed on the map.
+example, inside the `data/datapoints` folder, you can add a new data file
+directly on GitHub, in the same folder, and make a Pull Request.
+Once merged, the data will be part of the application, and will be displayed on the map.
+
 
 Report bugs
 ~~~~~~~~~~~
