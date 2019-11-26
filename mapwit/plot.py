@@ -1,5 +1,14 @@
+# -*- coding: utf-8 -*-
+#
+# This file is part of MapWiT.
+# Copyright (c) 2019 The MapWiT Authors
+#
+# MapWiT is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
 import plotly.graph_objects as go
 from plotly.offline import plot
+
 from . import data
 
 
@@ -66,7 +75,8 @@ def create_map(df):
 
 def create_demo_map():
     """
-    Loads the demo dataset
+    Loads the demo dataset and creates the map
+    :returns: The map, in html, with the traces
     """
     df = data.read_demo_data()
     return create_map(df)
@@ -74,7 +84,9 @@ def create_demo_map():
 
 def create_datapoints_map():
     """
-    Load the data provided via the contributions
+    Load the data provided via the contributions,
+    and create the map
+    :returns: The map, in html, with the traces
     """
     df = data.read_datapoints_data()
     return create_map(df)

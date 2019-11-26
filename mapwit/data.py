@@ -1,23 +1,49 @@
-from flask import current_app as app
-import pandas as pd
-import jsonschema
+# -*- coding: utf-8 -*-
+#
+# This file is part of MapWiT.
+# Copyright (c) 2019 The MapWiT Authors
+#
+# MapWiT is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+import collections
 import json
 import os
-import collections
 
+import jsonschema
+import pandas as pd
+from flask import current_app as app
+
+# path to the demp data file
 DEMO_DATA = "data/demo_dataset.csv"
+
+# path to the folder containing the data points
 DATAFILES_PATH = "data/datapoints"
+
+# path to the JSON schema
 JSONSCHEMA_PATH = os.path.join("data", "mapwit_schema.json")
+
+# path to the root of the application
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 def read_demo_data():
+    """
+    Reads the demo data file into a Panda DataFrame
+    :return: The demo dataframe
+    """
     df = pd.read_csv(app.open_resource(DEMO_DATA))
     df.head()
     return df
 
 
 def read_datapoints_data():
+    """
+    Reads the data points files found in the `/data/datapoints` folder and
+    converts them to a Panda DataFrame
+    :return: The datapoints as a DataFrame
+    """
+
     data_keys = {
         "CountryOfLiving": "Live",
         "CountryOfBirth": "Born",
@@ -44,6 +70,12 @@ def read_datapoints_data():
 
 
 def validate_datapoint(filename):
+    """
+    Validates all the datapoint files agains the JSON schema;
+    The function will raise an error if one of the datafiles is not valid.
+    :return: a json object with the data from `filename`
+
+    """
     filepath = os.path.join(DATAFILES_PATH, filename)
 
     f = app.open_resource(JSONSCHEMA_PATH)
