@@ -1,14 +1,3 @@
-MapWiT project
-
-This is a prototype project created for the "Contributing to OpenSource" workshop @EuropeanWomeninTechnology conference, 26-27 Nov, 2019.
-
-..
-    This file is part of MapWiT.
-
-    MapWiT is free software; you can redistribute it and/or modify it
-    under the terms of the MIT License; see LICENSE file for more details.
-
-
 ============
  MapWiT
 ============
@@ -16,7 +5,13 @@ This is a prototype project created for the "Contributing to OpenSource" worksho
 **Plotting contributions during the Open Source workshop @EuropeanWomenInTechnology conference, 2019.**
 
 .. image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-    :target: http://makeapullrequest.com
+  :target: http://makeapullrequest.com
+
+.. image:: https://img.shields.io/github/license/ludmilamarian/MapWiT?style=flat-square
+  :target: https://github.com/ludmilamarian/MapWiT/blob/master/LICENSE
+
+.. https://img.shields.io/gitter/room/ludmilamarian/MapWiT?style=flat-square
+  :target: https://gitter.im/ludmilamarian/MapWiT
 
 
 This is a prototype project created for the "Contributing to OpenSource" workshop @EuropeanWomeninTechnology conference, 26-27 Nov, 2019, Amsterdam.
@@ -34,4 +29,4 @@ and then do inside of the `mapwit` top folder::
   $ flask run
 
 
-.. image:: screenshots/Screenshot_2019-11-27.png.jpeg
+.. image:: screenshots/Screenshot_2019-11-27.png
