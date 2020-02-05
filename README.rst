@@ -29,4 +29,4 @@ and then, inside of the `mapwit` top folder, run the following::
   $ flask run
 
 
-.. image:: screenshots/Screenshot_2019-11-27.png
+.. image:: screenshots/Screenshot_2020-02-05.png
