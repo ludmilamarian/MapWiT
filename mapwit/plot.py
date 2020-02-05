@@ -49,9 +49,14 @@ def create_map(df):
             )
         )
 
+    total_participants = int((sum(df["Born"]) + sum(df["Live"])) / 2)
+
     fig.update_layout(
         title=go.layout.Title(
-            text='Participation to the Workshop "Contributing to Open Source" - <a href="https://www.europeanwomenintech.com">EWiT</a>'
+            text='Participation to the 2019 <a href="https://www.europeanwomenintech.com">EWiT</a> Workshop "Contributing to Open Source" - \
+<b>{0}</b> active contributors, representing <b>{1}</b> countries<sup>*</sup>.'.format(
+                total_participants, len(df["Country"])
+            )
         ),
         geo=dict(
             landcolor="rgb(217, 217, 217)",
